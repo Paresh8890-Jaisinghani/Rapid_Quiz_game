@@ -14,7 +14,27 @@
 </head>
 
 <body>
+
+    <div class="sec">
+        <div class="background">
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+        <form id="loginform">
+          <h3>Login Here</h3>
+          <h2>NOTE:</h2>
+          <h1>Please check your email for the code.</h1>
+    
+          <input type="text" placeholder="Enter Your Code" id="otp" maxlength="4"  autocomplete="off">
+    
+          <button type="submit" id="log">Log In</button>
+        </form>
+    </div>
+
+<div id="main-menu">
+
     <!-- start Quiz button -->
+
     <div class="start_btn"><button>Start Quiz</button></div>
 
     <!-- Info Box -->
@@ -76,6 +96,7 @@
             </a>
         </div>
     </div>
+</div>
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
     <script src="../Quiz_Backend/questions.js"></script>

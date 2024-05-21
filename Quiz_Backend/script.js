@@ -9,6 +9,51 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
+const loginform  = document.getElementById("loginform");
+const number = document.getElementById("otp");
+const mainMenu = document.getElementById("main-menu");
+const sec = document.querySelector(".sec");
+
+
+let otp
+
+loginform.addEventListener("submit", async function(event){
+  event.preventDefault();
+  const temp = number.value;
+  otp = temp.toString();
+  console.log(otp);
+
+  try {
+      const response = await fetch('http://localhost:3001/api/scores', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            Quiz_Score  : 0,
+              otpcode: otp
+          })
+      });
+
+      if (response.status === 404) {
+          alert("Wrong code Entered, Please try again.");
+          location.reload();
+          return;
+      }
+
+      sec.style.display = "none";
+      mainMenu.style.display = "block";
+      alert("You are logged in successfully.");
+  } catch (err) {
+      console.error('Error logging in:', err.message);
+      alert("An error occurred. Please try again.");
+  }
+});
+
+
+async function getotpFromUser() {
+    return otp;
+  }
 
 // if startQuiz button clicked                  
 start_btn.onclick = ()=>{                     
@@ -145,7 +190,7 @@ function optionSelected(answer){
     next_btn.classList.add("show"); //show the next button if user selected any option
 }
 
-function showResult(){
+async function showResult(){
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
@@ -153,6 +198,24 @@ function showResult(){
     let scoreTag = '<span>and You Scored : </span>';
     scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     restart_quiz.innerHTML = userScore + "/" + questions.length;
+
+    try {
+        const otp = await getotpFromUser();
+        const response = await fetch('http://localhost:3001/api/scores', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                Quiz_Score :userScore + "/" + questions.length,
+                otpcode: otp
+            })
+        });
+            console.log('Score saved successfully');
+    } catch (err) {
+        console.error('Error saving score:', err.message);
+    }
+
     // if (userScore > 8){ // if user scored more than 3
     //     //creating a new span tag and passing the user score number and total question number
     //     let scoreTag = '<span>and congrats! , You got : </span>';
