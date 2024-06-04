@@ -14,7 +14,9 @@ body{
 
 #main-menu{
     display: none;
-    background-color: #84c5fe;
+    background-color: #3f76a6;
+    width: 100%;
+    height: 100vh;
     
 }
 
@@ -393,6 +395,7 @@ footer button.show{
 img{
     width: 200px;
     height: 200px;
+    margin-left: 25%;
 }
 
 @media(max-width :700px) {
@@ -453,12 +456,14 @@ Form Style */
 .sec form h1{
     display: block;
     letter-spacing: .5px;
-    margin-top: 5px;
+    margin-top: 15px;
+    padding-top:8px;
     font-size: 1.5em;
-    margin-inline-start: 0px;
+    font-weight: 500;
+    /* margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    unicode-bidi: isolate;
+    unicode-bidi: isolate; */
   }
 
 
@@ -485,9 +490,17 @@ Form Style */
   }
  .sec form h3{
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 20px;
     text-align: center;
+    display: block;
+    /* font-size: 1.5em; */
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* font-weight: bold; */
+    unicode-bidi: isolate;
   }
   
  .sec label{
@@ -537,13 +550,3 @@ Form Style */
   
   
   
-form h3{
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
- } 

@@ -1,12 +1,12 @@
-const express = require('express')
 const mongoose = require('mongoose')
+const express = require('express')
 const cors = require('cors')
 const Contact = require('./model.js')
 
 
 const app = express();
 app.use(cors());
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3003;
 
 
 mongoose.connect('mongodb+srv://Paresh:pareshjaisinghani@cluster0.rxwg4ag.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
@@ -32,7 +32,7 @@ app.post('/api/scores',async (req,res)=>{
         if(!contact){
             return res.status(404).json({ message: "Wrong code Entered" });
         }
-
+        
         contact.Quiz_Score  = Quiz_Score;
 
         await contact.save();

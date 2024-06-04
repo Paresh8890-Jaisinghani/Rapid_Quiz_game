@@ -24,7 +24,7 @@ loginform.addEventListener("submit", async function(event){
   console.log(otp);
 
   try {
-      const response = await fetch('http://localhost:3001/api/scores', {
+      const response = await fetch('http://localhost:3003/api/scores', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -57,23 +57,27 @@ async function getotpFromUser() {
 
 // if startQuiz button clicked                  
 start_btn.onclick = ()=>{                     
-    info_box.classList.add("activeInfo"); //show info box
-}
-
-// if exitQuiz button clicked
-exit_btn.onclick = ()=>{
-    info_box.classList.remove("activeInfo"); //hide info box
-}
-
-// if continueQuiz button clicked
-continue_btn.onclick = ()=>{
-    info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
     showQuetions(0); //calling showQestions function
     queCounter(1); //passing 1 parameter to queCounter
     startTimer(15); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function
 }
+
+// if exitQuiz button clicked
+// exit_btn.onclick = ()=>{
+//     info_box.classList.remove("activeInfo"); //hide info box
+// }
+
+// if continueQuiz button clicked
+// continue_btn.onclick = ()=>{
+//     info_box.classList.remove("activeInfo"); //hide info box
+//     quiz_box.classList.add("activeQuiz"); //show quiz box
+//     showQuetions(0); //calling showQestions function
+//     queCounter(1); //passing 1 parameter to queCounter
+//     startTimer(15); //calling startTimer function
+//     startTimerLine(0); //calling startTimerLine function
+// }
 
 let timeValue =  15;
 let que_count = 0;
@@ -201,7 +205,7 @@ async function showResult(){
 
     try {
         const otp = await getotpFromUser();
-        const response = await fetch('http://localhost:3001/api/scores', {
+        const response = await fetch('http://localhost:3003/api/scores', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -211,10 +215,10 @@ async function showResult(){
                 otpcode: otp
             })
         });
-            console.log('Score saved successfully');
-    } catch (err) {
-        console.error('Error saving score:', err.message);
-    }
+                console.log('Score saved successfully');
+        } catch (err) {
+            console.error('Error saving score:', err.message);
+        }
 
     // if (userScore > 8){ // if user scored more than 3
     //     //creating a new span tag and passing the user score number and total question number
