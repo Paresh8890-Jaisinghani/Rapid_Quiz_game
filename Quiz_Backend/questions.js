@@ -97,25 +97,26 @@ let questions = [
     },
     {
         numb: 9,
-        question: "These signs mean what? <img src='./image/image9.png' alt='Image'>",
-        answer: "Side Road Left",
+       
+        question: "These signs mean what? <img src='./image/image11.png' alt='Image'>",
+    
+        answer: "Two wheeler prohibited",
         options: [
-            "Y-Intersection",
-            "Side Road Left",
-            "Rest stop ahead.",
+            "Two wheeler allowed",
+            "Two wheeler prohibited",
+            "Vehicle not allowed",
             "None of these."
         ]
 
     },
     {
         numb: 10,
-        question: "These signs mean what? <img src='./image/image10.png' alt='Image'>",
-
-        answer: "Public Telephone",
+        question: "These signs mean what? <img src='./image/image9.png' alt='Image'>",
+        answer: "Side Road Left",
         options: [
-            "Public Telephone",
-            "Parking Area Ahead",
-            "Taxi Stand Ahead",
+            "Y-Intersection",
+            "Side Road Left",
+            "Rest stop ahead.",
             "None of these."
         ]
     },
