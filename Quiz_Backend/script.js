@@ -13,9 +13,22 @@ const loginform  = document.getElementById("loginform");
 const number = document.getElementById("otp");
 const mainMenu = document.getElementById("main-menu");
 const sec = document.querySelector(".sec");
+const btn = document.querySelector(".buttons button.quit")
 
 
 let otp
+
+let isNavigatingAway = false; // Flag to track if the user clicked the "Next" button
+
+// Function to warn the user before reloading or leaving the page
+function warnUserBeforeReload(event) {
+    if (!isNavigatingAway) {
+        const confirmationMessage = "If you reload the page, your score will be deleted.";
+        (event || window.event).returnValue = confirmationMessage; // Standard for most browsers
+        return confirmationMessage; // Required for some older browsers
+    }
+}
+
 
 loginform.addEventListener("submit", async function(event){
   event.preventDefault();
@@ -44,6 +57,7 @@ loginform.addEventListener("submit", async function(event){
       sec.style.display = "none";
       mainMenu.style.display = "block";
       alert("You are logged in successfully.");
+      window.addEventListener("beforeunload", warnUserBeforeReload);
   } catch (err) {
       console.error('Error logging in:', err.message);
       alert("An error occurred. Please try again.");
@@ -114,6 +128,7 @@ const restart_quiz = result_box.querySelector(".buttons .restart");
 //     window.location.reload(); //reload the current window
 // }
 
+
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
@@ -140,7 +155,7 @@ next_btn.onclick = ()=>{
 // getting questions and options from array
 function showQuetions(index){
     const que_text = document.querySelector(".que_text");
-
+    
     //creating a new span and div tag for question and option and passing the value using array index
     let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
     let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
@@ -151,7 +166,7 @@ function showQuetions(index){
     option_list.innerHTML = option_tag; //adding new div tag inside option_tag
     
     const option = option_list.querySelectorAll(".option");
-
+    
     // set onclick attribute to all available options
     for(i=0; i < option.length; i++){
         option[i].setAttribute("onclick", "optionSelected(this)");
@@ -179,7 +194,7 @@ function optionSelected(answer){
         answer.classList.add("incorrect"); //adding red color to correct selected option
         answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
         console.log("Wrong Answer");
-
+        
         for(i=0; i < allOptions; i++){
             if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer 
                 option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
@@ -194,15 +209,26 @@ function optionSelected(answer){
     next_btn.classList.add("show"); //show the next button if user selected any option
 }
 
+
+function navigateToNext() {
+    isNavigatingAway = true;
+    
+    window.location.href = "http://localhost:3002/quiz"; // Replace with the actual URL of the next page
+    
+  }
+
 async function showResult(){
+    window.removeEventListener("beforeunload",warnUserBeforeReload);
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
+    
     const scoreText = result_box.querySelector(".score_text");
     let scoreTag = '<span>and You Scored : </span>';
     scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     restart_quiz.innerHTML = userScore + "/" + questions.length;
-
+  
+    
     try {
         const otp = await getotpFromUser();
         const response = await fetch('http://localhost:3003/api/scores', {
@@ -220,23 +246,6 @@ async function showResult(){
             console.error('Error saving score:', err.message);
         }
 
-    // if (userScore > 8){ // if user scored more than 3
-    //     //creating a new span tag and passing the user score number and total question number
-    //     let scoreTag = '<span>and congrats! , You got : </span>';
-    //     scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
-    //     restart_quiz.innerHTML = userScore + "/" + questions.length;
-    // }
-
-    // else if(userScore > 6){ // if user scored more than 1
-    //     let scoreTag = '<span>and nice , You got : </span>';
-    //     scoreText.innerHTML = scoreTag;
-    //     restart_quiz.innerHTML = userScore + "/" + questions.length;
-    // }
-    // else{ // if user scored less than 1
-    //     let scoreTag = '<span>and sorry , You got only : </span>';
-    //     scoreText.innerHTML = scoreTag;
-    //     restart_quiz.innerHTML = userScore + "/" + questions.length;
-    // }
 }
 
 function startTimer(time){
