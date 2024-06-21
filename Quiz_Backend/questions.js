@@ -98,12 +98,12 @@ let questions = [
     {
         numb: 9,
        
-        question: "These signs mean what? <img src='./image/image11.png' alt='Image'>",
+        question: "These signs mean what? <img src='./image/image9(1).png' alt='Image'>",
     
-        answer: "Two wheeler prohibited",
+        answer: "Blind Persons Likely on Road Ahead",
         options: [
-            "Two wheeler allowed",
-            "Two wheeler prohibited",
+            "Deaf Persons Likely on Road Ahead",
+            "Blind Persons Likely on Road Ahead",
             "Vehicle not allowed",
             "None of these."
         ]
