@@ -14,12 +14,12 @@ let questions = [
     },
     {
         numb: 2,
-        question: "These signs mean what? <img src='./image/image2.png' alt='Image'>",
-        answer: "No Parking at any time.",
+        question: "These signs mean what? <img src='./image/image2(1).png' alt='Image'>",
+        answer: "No Entry",
         options: [
-            "1 hour parking only.",
-            "5 minute parking allowed.",
-            "No Parking at any time.",
+            "Stop",
+            "No parking",
+            "No Entry",
             "None of these."
         ]
     },

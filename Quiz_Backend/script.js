@@ -213,7 +213,7 @@ function optionSelected(answer){
 function navigateToNext() {
     isNavigatingAway = true;
     
-    window.location.href = "http://localhost:3002/quiz"; // Replace with the actual URL of the next page
+    window.location.href = "http://localhost:3002/precision"; // Replace with the actual URL of the next page
     
   }
 
