@@ -2,7 +2,7 @@
 let questions = [
     {
         numb: 1,
-        question: "These signs mean what? <img src='./image/image1.png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image1.png' alt='Image'>",
 
         answer: "Pedestrian crossing.",
         options: [
@@ -14,7 +14,7 @@ let questions = [
     },
     {
         numb: 2,
-        question: "These signs mean what? <img src='./image/image2(2).png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image2(2).png' alt='Image'>",
         answer: "No Entry",
         options: [
             "Stop",
@@ -25,7 +25,7 @@ let questions = [
     },
     {
         numb: 3,
-        question: "These signs mean what? <img src='./image/image3.png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image3.png' alt='Image'>",
 
         answer: "Overtaking Prohibited",
         options: [
@@ -37,7 +37,7 @@ let questions = [
     },
     {
         numb: 4,
-        question: "These signs mean what? <img src='./image/image4(1).png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image4(1).png' alt='Image'>",
 
         answer: "Compulsory Turn Left",
         options: [
@@ -49,7 +49,7 @@ let questions = [
     },
     {
         numb: 5,
-        question: "These signs mean what? <img src='./image/image5.png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image5.png' alt='Image'>",
 
         answer: "Two way traffic.",
         options: [
@@ -61,7 +61,7 @@ let questions = [
     },
     {
         numb: 6,
-        question: "These signs mean what? <img src='./image/image6(1).png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image6(1).png' alt='Image'>",
 
         answer: "Start of Dual Carriageway",
         options: [
@@ -73,7 +73,7 @@ let questions = [
     },
     {
         numb: 7,
-        question: "These signs mean what? <img src='./image/image7.png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image7.png' alt='Image'>",
 
         answer: "Minimum Speed Limit",
         options: [
@@ -85,7 +85,7 @@ let questions = [
     },
     {
         numb: 8,
-        question: "These signs mean what? <img src='./image/image8(1).png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image8(1).png' alt='Image'>",
 
         answer: "Police Station Ahead",
         options: [
@@ -98,7 +98,7 @@ let questions = [
     {
         numb: 9,
        
-        question: "These signs mean what? <img src='./image/image9(1).png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image9(1).png' alt='Image'>",
     
         answer: "Blind Persons Likely on Road Ahead",
         options: [
@@ -111,7 +111,7 @@ let questions = [
     },
     {
         numb: 10,
-        question: "These signs mean what? <img src='./image/image10(1).png' alt='Image'>",
+        question: "These sign mean what? <img src='./image/image10(1).png' alt='Image'>",
         answer: "Side Road Left",
         options: [
             "Y-Intersection",
