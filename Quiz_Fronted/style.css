@@ -408,6 +408,10 @@ img{
     .result_box{
         width: 90%;
     }
+    img{
+        width: 200px;
+        margin-left: 20%;
+    }
 }
 
 

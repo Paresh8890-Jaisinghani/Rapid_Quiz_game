@@ -2,122 +2,122 @@
 let questions = [
     {
         numb: 1,
-        question: "These sign mean what? <img src='./image/image1.png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image1.png' alt='Image'>",
 
-        answer: "Pedestrian crossing.",
+        answer: "Pedestrian crossing",
         options: [
             "Cross-road",
-            "Pedestrian crossing.",
-            "Railway crossing.",
-            "None of these."
+            "Pedestrian crossing",
+            "Railway crossing",
+            "None of these"
         ]
     },
     {
         numb: 2,
-        question: "These sign mean what? <img src='./image/image2(2).png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image2(2).png' alt='Image'>",
         answer: "No Entry",
         options: [
             "Stop",
             "No parking",
             "No Entry",
-            "None of these."
+            "None of these"
         ]
     },
     {
         numb: 3,
-        question: "These sign mean what? <img src='./image/image3.png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image3.png' alt='Image'>",
 
         answer: "Overtaking Prohibited",
         options: [
             "Overtaking Prohibited",
             "No Stopping",
             "No Parking",
-            "None of these."
+            "None of these"
         ]
     },
     {
         numb: 4,
-        question: "These sign mean what? <img src='./image/image4(1).png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image4(1).png' alt='Image'>",
 
         answer: "Compulsory Turn Left",
         options: [
-            "Turning left prohibited.",
+            "Left Turn Prohibited",
             "Compulsory Turn Left",
-            "One way traffic",
-            "None of these."
+            "Compulsory Keep Left",
+            "None of these"
         ]
     },
     {
         numb: 5,
-        question: "These sign mean what? <img src='./image/image5.png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image5.png' alt='Image'>",
 
-        answer: "Two way traffic.",
+        answer: "Two Way Operation",
         options: [
-            "Two way traffic.",
-            "One lane ahead.",
-            "Proceed with caution.",
-            "None of these."
+            "Two Way Operation",
+            "One lane ahead",
+            "Two Lane Carriageway",
+            "None of these"
         ]
     },
     {
         numb: 6,
-        question: "These sign mean what? <img src='./image/image6(1).png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image6(1).png' alt='Image'>",
 
         answer: "Start of Dual Carriageway",
         options: [
             "Start of Dual Carriageway",
-            "3 lanes of traffic ahead.",
-            "Traffic ends.",
-            "None of these."
+            "3 lanes of traffic ahead",
+            "Traffic ends",
+            "None of these"
         ]
     },
     {
         numb: 7,
-        question: "These sign mean what? <img src='./image/image7.png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image7.png' alt='Image'>",
 
         answer: "Minimum Speed Limit",
         options: [
             "Minimum Speed Limit",
             "Maximum Speed Limit",
             "Recommended speed ",
-            "None of these."
+            "None of these"
         ]
     },
     {
         numb: 8,
-        question: "These sign mean what? <img src='./image/image8(1).png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image8(1).png' alt='Image'>",
 
         answer: "Police Station Ahead",
         options: [
-            "Zoo ahead.",
+            "Stop for Police Check",
             "Petrol Pump Ahead",
             "Police Station Ahead",
-            "None of these."
+            "None of these"
         ]
     },
     {
         numb: 9,
        
-        question: "These sign mean what? <img src='./image/image9(1).png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image9(1).png' alt='Image'>",
     
         answer: "Blind Persons Likely on Road Ahead",
         options: [
             "Deaf Persons Likely on Road Ahead",
             "Blind Persons Likely on Road Ahead",
             "Vehicle not allowed",
-            "None of these."
+            "None of these"
         ]
 
     },
     {
         numb: 10,
-        question: "These sign mean what? <img src='./image/image10(1).png' alt='Image'>",
+        question: "What do these indicate? <img src='./image/image10(1).png' alt='Image'>",
         answer: "Side Road Left",
         options: [
             "Y-Intersection",
             "Side Road Left",
-            "Rest stop ahead.",
-            "None of these."
+            "Rest stop ahead",
+            "None of these"
         ]
     },
 
